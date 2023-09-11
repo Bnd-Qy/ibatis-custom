@@ -1,0 +1,13 @@
+<mapper namespace="com.vmware.mapper.UserMapper">
+<!--  唯一表标识:namespace.id statementId  -->
+    <select id="findAll" resultType="com.vmware.model.User">
+        select * from user;
+    </select>
+
+    <select id="selectOne" resultType="com.vmware.model.User" parameterType="com.vmware.model.User">
+        select * from user where id= #{id} and username= #{username}
+    </select>
+    <update>
+
+    </update>
+</mapper>
